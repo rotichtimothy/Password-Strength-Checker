@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container" role="form" aria-labelledby="password-checker-heading">
+        <h2 id="password-checker-heading">Password Strength Checker</h2>
+        <label for="password">Enter your password:</label>
+        <input type="password" id="password" aria-describedby="password-instructions" placeholder="Enter your password">
+        <div id="password-instructions" class="instructions">
+            Ensure your password meets the following criteria:
+        </div>
+        <div id="strength-bar" class="strength">
+            <div id="strength-progress"></div>
+        </div>
+        <div id="message" class="message"></div>
+        <div id="entropy" class="entropy"></div>
+        <div id="criteria" class="criteria">
+            <div class="criterion" data-tooltip="Make your password at least 8 characters long.">
+                <i id="length-icon" class="fas"></i> <span>At least 8 characters</span>
+            </div>
+            <div class="criterion" data-tooltip="Include at least one lowercase letter.">
+                <i id="lowercase-icon" class="fas"></i> <span>At least one lowercase letter</span>
+            </div>
+            <div class="criterion" data-tooltip="Include at least one uppercase letter.">
+                <i id="uppercase-icon" class="fas"></i> <span>At least one uppercase letter</span>
+            </div>
+            <div class="criterion" data-tooltip="Include at least one number.">
+                <i id="number-icon" class="fas"></i> <span>At least one number</span>
+            </div>
+            <div class="criterion" data-tooltip="Include at least one special character (e.g., !@#$%^&*).">
+                <i id="special-icon" class="fas"></i> <span>At least one special character</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
